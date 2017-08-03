@@ -8,14 +8,14 @@
     customerImage = customer.picture.large;
     customerState = abbrState(customer.location.state, 'abbr');
 
-    console.log(customer.picture.medium);
-    console.log(customerName);
-    console.log(customer.email);
-    console.log(customer.location.street);
-    console.log(customer.location.city);
-    console.log(customer.location.state);
-    console.log(customer.location.postcode);
-    console.log(customer.id.value);
+    // console.log(customer.picture.medium);
+    // console.log(customerName);
+    // console.log(customer.email);
+    // console.log(customer.location.street);
+    // console.log(customer.location.city);
+    // console.log(customer.location.state);
+    // console.log(customer.location.postcode);
+    // console.log(customer.id.value);
 
     var customerDiv = `<img src="${customerImage}">\n\
                        <h2 class="customer-name">${customerName}</h2>\n\
@@ -24,6 +24,7 @@
                        <p>${customer.location.city}, ${customerState}, ${customer.location.postcode}</p>\n\
                        <p>${customer.phone}</p>\n\
                        <span class="social">${customer.id.value}</span>`
+
     var newDiv = document.createElement("div");
     
     newDiv.className = 'col customer';
@@ -33,6 +34,7 @@
     newDiv.innerHTML = customerDiv;
 
   });
+
   // imported state abbreviation function
   function abbrState(input, to){
       
@@ -107,6 +109,5 @@
           }    
       }
   }
-
 
 })();
